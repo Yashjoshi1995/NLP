@@ -11,7 +11,11 @@ d. Tokenization: Splitting a sentence into words and creating a list, ie each se
 e. Remove stopwords
 f. Lemmatize/Stem: Getting words to its root form. In preprocessing either Stemming or Lemmatizing is done.
 
-2. For fitting a model, the text must be converted to numeric form which can be understood by the machine. This is called as Vectorization. There are different methods by which we can perform this:
+2. After cleaning the text we can plot Word Cloud and Bar Graph and analyse the most frequently used words. This will help to analyse the text.
+
+3. We can also create new features from the text such as length of sentences for ham/spam texts or from ham/spam which contains more number of punctuations.
+
+4. For fitting a model, the text must be converted to numeric form which can be understood by the machine. This is called as Vectorization. There are different methods by which we can perform this:
   a. Bag of words(BOW): In this all the unique words are collected from the corpus(text data) and the frequency of each word in each sentence is taken(called as Term Frequency(TF)). This is done by CountVectorizer of nltk library. In this, we can give parameter(ngram_range) to set how many words we want to have, ie:;
     unigram - a token comprises of exactle one word
     bigram: a token comprises of exactly 2 words
@@ -22,3 +26,5 @@ f. Lemmatize/Stem: Getting words to its root form. In preprocessing either Stemm
    b. Term Frequency-Inverse Document Frequency(TF-IDF): It is used to give weightage or importance to uncommon words or seldom used words.
    
   Both BOW and TF-IDF doen't store the semantic information.
+  
+5.Now after converting all the text to numeric form we will apply classification algorithm to predict the classes.
